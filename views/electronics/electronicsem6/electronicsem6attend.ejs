@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- css file import -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <!-- css end -->
+  <title>Attendence</title>
+</head>
+
+<body>
+
+  <!-- login  -->
+  <style>
+    .login-form {
+      width: 450px ;
+      margin: 150px auto;
+      font-size: 15px;
+    }
+
+    .login-form form {
+      margin-bottom: 15px;
+      background: #f7f7f7;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+    }
+
+    .login-form h2 {
+      margin: 110 10 110px;
+    }
+
+    .form-control,
+    .btn {
+      min-height: 38px;
+      border-radius: 2px;
+    }
+
+    .btn {
+      font-size: 15px;
+      font-weight: bold;
+    }
+  </style>
+  <div class="login-form">
+    <form action="/otp1.18" method="POST">
+      <h2 class="text-center">electronic sem 6 Attendence</h2>
+      <div class="form-group">
+        <label  class="col-md-3 control-label">ER No.</label>
+        <input name="student_er_no" class="form-control" placeholder="er no" required="required">
+      </div>
+      
+      <div class="form-group">
+        <label  class="col-md-3 control-label">Roll No.</label>
+        <input name="student_roll" class="form-control" placeholder="roll no" required="required">
+      </div>
+      
+      <div>
+        <label>Select subject</label>
+        <select class="form-select" name="subject" aria-label="Default select example">
+          <option selected>Select subject</option>
+          <option name="management">management</option>
+          <option name="computer_networking_and_data_communication">computer networking and data communication</option>
+          <option name="emerging_trends_in_electronics">emerging trends in electronics</option>
+          <option name="optical_network_and_satellite_communication">optical network and satellite communication</option>
+          <option name="enterpreneurship_development">enterpreneurship development</option>
+          <option name="capstone_project_execution_and_report_writing">capstone project execution and report writing</option>
+          <option name="vlsi_with_vhdl">vlsi with vhdl</option>
+        </select>
+      </div>
+      <br>
+      <% if(locals.otp){ %>
+        <div class="alter alert-danger text-center">
+          <%= otp %>
+        </div>
+       <% } %> 
+       <P>
+         Enter OTP Provided by your teacher!
+       </P>
+      
+        <p>
+          <label>Enter otp :</label>
+          <input type="text" name="otp" required>
+        </p>
+    
+      <br>
+      <div class="form-group">
+        <button type="submit" value="submit" class="btn btn-primary btn-block">Submit</button>
+      </div>
+
+    </form>
+    <!-- <p class="text-center"><a href="/homepage">Home</a></p> -->
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

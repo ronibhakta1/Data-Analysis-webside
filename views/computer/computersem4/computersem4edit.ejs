@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.10/" id="EmployeeForm" class="form-horizontal" method="post" role="form">
+                                
+
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="java_programming" class="col-md-3 control-label">java programming</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="java_programming"
+                                            value="<%= row.java_programming %>" placeholder="java programming">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="software_engineering" class="col-md-3 control-label">software engineering</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="software_engineering"
+                                            value="<%= row.software_engineering %>" placeholder="software engineering">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="data_communication_and_computer_network" class="col-md-3 control-label">data communication and computer network</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="data_communication_and_computer_network"
+                                            value="<%= row.data_communication_and_computer_network %>" placeholder="data communication and computer network">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="microprocessors" class="col-md-3 control-label">microprocessors</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="microprocessors"
+                                            value="<%= row.microprocessors %>" placeholder="microprocessors">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gui_application_development_using_vb.net" class="col-md-3 control-label">gui application development using vb.net</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="gui_application_development_using_vbnet"
+                                            value="<%= row.gui_application_development_using_vbnet %>" placeholder="gui application development using vb.net">
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="rating"
+                                            value="<%= row.rating %>" placeholder="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="remark" class="col-md-3 control-label">remark </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

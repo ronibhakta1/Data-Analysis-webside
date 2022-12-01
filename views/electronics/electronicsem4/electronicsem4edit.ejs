@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.16/" id="EmployeeForm" class="form-horizontal" method="post" role="form">
+                                
+
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="linear_integrated_circuits" class="col-md-3 control-label">linear integrated circuits</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="linear_integrated_circuits"
+                                            value="<%= row.linear_integrated_circuits %>" placeholder="linear integrated circuits">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="consumer_electronics" class="col-md-3 control-label">consumer electronics</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="consumer_electronics"
+                                            value="<%= row.consumer_electronics %>" placeholder="consumer electronics">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="microcontroller_and_application" class="col-md-3 control-label">microcontroller and application</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="microcontroller_and_application"
+                                            value="<%= row.microcontroller_and_application %>" placeholder="microcontroller and application">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="basic_power_electronics" class="col-md-3 control-label">basic power electronics</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="basic_power_electronics"
+                                            value="<%= row.basic_power_electronics %>" placeholder="basic power electronics">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="digital_communication_systems" class="col-md-3 control-label">digital communication systems</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="digital_communication_systems"
+                                            value="<%= row.digital_communication_systems %>" placeholder="digital communication systems">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="maintenance_of_electronics_equipments_and_eda_tools_practices" class="col-md-3 control-label">maintenance of electronics equipments and eda tools practices</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="maintenance_of_electronics_equipments_and_eda_tools_practices"
+                                            value="<%= row.maintenance_of_electronics_equipments_and_eda_tools_practices %>" placeholder="maintenance of electronics equipments and eda tools practices">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="rating"
+                                            value="<%= row.rating %>" placeholder="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="remark" class="col-md-3 control-label">remark </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

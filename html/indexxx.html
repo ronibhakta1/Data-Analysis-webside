@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+  </head>
+
+  <body>
+    <h1>Angular Gauge</h1>
+
+    <script type="text/javascript">
+      async function fetchData(id = 1) {
+        const { data } = await axios.get(
+          `http://localhost:3300/indexxx`
+        );
+        return data;
+      }
+
+      Promise.all([fetchData()]).then(v => {
+        console.log(v);
+        let val = v[0][0].bakersfield_central;
+        const ds = {
+          chart: {
+            caption: "Customer Satisfaction Score",
+            subcaption: "Last week",
+            lowerLimit: "0",
+            upperLimit: "22500",
+            lowerLimitDisplay: "Bad",
+            upperLimitDisplay: "Good",
+            showValue: "1",
+            valueBelowPivot: "1",
+            theme: "fusion"
+          },
+          colorRange: {
+            color: [
+              {
+                minValue: "0",
+
+            maxValue: "7500",
+            code: "#e44a00"
+          },
+          {
+            minValue: "7500",
+            maxValue: "15000",
+            code: "#f8bd19"
+          },
+          {
+            minValue: "15000",
+            maxValue: "22500",
+            code: "#6baa01"
+          }
+        ]
+      },
+      dials: {
+        dial: [
+          {
+            value: val
+          }
+        ]
+      }
+    };
+
+    FusionCharts.ready(function() {
+      var cSatScoreChart = new FusionCharts({
+        type: "angulargauge",
+        renderAt: "container",
+        width: "400",
+        height: "250",
+        dataFormat: "json",
+        dataSource: ds
+      }).render();
+    });
+  });
+</script>
+<div id="container"></div>

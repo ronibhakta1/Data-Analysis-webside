@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.15/" id="EmployeeForm" class="form-horizontal" method="post" role="form">
+                               
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="digital_techniques" class="col-md-3 control-label">digital techniques</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="digital_techniques"
+                                            value="<%= row.digital_techniques++ %>" placeholder="digital techniques">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="applied_electronics" class="col-md-3 control-label">applied electronics</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="applied_electronics"
+                                            value="<%= row.applied_electronics %>" placeholder="applied electronics">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="electric_circuits_and_networks" class="col-md-3 control-label">electric circuits and networkss</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="electric_circuits_and_networks"
+                                            value="<%= row.electric_circuits_and_networks %>" placeholder="electric circuits and networkss">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="electronic_measurement_and_instrumentation" class="col-md-3 control-label">electronic measurement and instrumentation</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="electronic_measurement_and_instrumentation"
+                                            value="<%= row.electronic_measurement_and_instrumentation %>" placeholder="electronic measurement and instrumentation">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="principles_of_electronic_communication" class="col-md-3 control-label">principles of electronic communication</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="principles_of_electronic_communication"
+                                            value="<%= row.principles_of_electronic_communication %>" placeholder="principles of electronic communication">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="rating"
+                                            value="<%= row.rating %>" placeholder="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="remark" class="col-md-3 control-label">remark</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

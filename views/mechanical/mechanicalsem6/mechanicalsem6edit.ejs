@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.24/" id="EmployeeForm" class="form-horizontal" method="post" role="form">
+                                
+
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="refrigeration_and_air_condition" class="col-md-3 control-label">refrigeration and air condition</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="refrigeration_and_air_condition"
+                                            value="<%= row.refrigeration_and_air_condition %>" placeholder="refrigeration and air condition">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="refrigeration_and_air_condition" class="col-md-3 control-label">industrial hydraulics and pneumatics</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="industrial_hydraulics_and_pneumatics"
+                                            value="<%= row.refrigeration_and_air_condition %>" placeholder="industrial hydraulics and pneumatics">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="industrial_engineering_and_quality_control" class="col-md-3 control-label">industrial engineering and quality control</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="industrial_engineering_and_quality_control"
+                                            value="<%= row.industrial_engineering_and_quality_control %>" placeholder="industrial engineering and quality control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emerging_trends_in_mechanical_engineering" class="col-md-3 control-label">emerging trends in mechanical engineering</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="emerging_trends_in_mechanical_engineering"
+                                            value="<%= row.emerging_trends_in_mechanical_engineering %>" placeholder="emerging trends in mechanical engineering">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="enterpreneurship_development" class="col-md-3 control-label">enterpreneurship development</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="enterpreneurship_development"
+                                            value="<%= row.enterpreneurship_development %>" placeholder="enterpreneurship development">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="automobile_development" class="col-md-3 control-label">automobile development</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="automobile_development"
+                                            value="<%= row.automobile_development %>" placeholder="automobile development">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="rating"
+                                            value="<%= row.rating %>" placeholder="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">remark</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

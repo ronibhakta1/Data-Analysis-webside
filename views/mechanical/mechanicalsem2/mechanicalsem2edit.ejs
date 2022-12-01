@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.20/" id="EmployeeForm" class="form-horizontal" method="post" role="form">
+                                
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="applied_science" class="col-md-3 control-label">applied science</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="applied_science"
+                                            value="<%= row.applied_science++ %>" placeholder="applied science">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="applied_mechanics" class="col-md-3 control-label">applied mechanics</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="applied_mechanics"
+                                            value="<%= row.applied_mechanics %>" placeholder="applied mechanics">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="applied_mathematics" class="col-md-3 control-label">applied mathematics</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="applied_mathematics"
+                                            value="<%= row.applied_mathematics %>" placeholder="applied mathematics">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="engineering_drawing" class="col-md-3 control-label">engineering drawing</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="engineering_drawing"
+                                            value="<%= row.engineering_drawing %>" placeholder="engineering drawing">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="business_communication_using_computers" class="col-md-3 control-label">business communication using computers</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="business_communication_using_computers"
+                                            value="<%= row.business_communication_using_computers %>" placeholder="business communication using computers">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mechanical_engineering_workshop" class="col-md-3 control-label">mechanical engineering workshop</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="mechanical_engineering_workshop"
+                                            value="<%= row.mechanical_engineering_workshop %>" placeholder="mechanical engineering workshop">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="rating"
+                                            value="<%= row.rating %>" placeholder="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="remark" class="col-md-3 control-label">remark</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

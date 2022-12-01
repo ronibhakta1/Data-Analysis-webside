@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.12/" id="EmployeeForm" class="form-horizontal" method="post" role="form">
+                                
+
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="management" class="col-md-3 control-label">management</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="management"
+                                            value="<%= row.management %>" placeholder="management">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="programming_with_python" class="col-md-3 control-label">programming with python</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="programming_with_python"
+                                            value="<%= row.programming_with_python %>" placeholder="programming with python">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mobile_application_development" class="col-md-3 control-label">mobile_application_development</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="mobile_application_development"
+                                            value="<%= row.mobile_application_development %>" placeholder="mobile_application_development">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emerging_trends_in_computer_and_information_technology" class="col-md-3 control-label">emerging trends in computer and information technology</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="emerging_trends_in_computer_and_information_technology"
+                                            value="<%= row.emerging_trends_in_computer_and_information_technology %>" placeholder="emerging trends in computer and information technology">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="network_and_information_security" class="col-md-3 control-label">network and information security</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="engineering_graphics"
+                                            value="<%= row.network_and_information_security %>" placeholder="network and information security">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="enterpreneurship_development" class="col-md-3 control-label">enterpreneurship development</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="enterpreneurship_development"
+                                            value="<%= row.enterpreneurship_development %>" placeholder="enterpreneurship development">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="capstone_project_execution_and_report_writing" class="col-md-3 control-label">capstone project execution and report writing</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="capstone_project_execution_and_report_writing"
+                                            value="<%= row.capstone_project_execution_and_report_writing %>" placeholder="capstone project execution and report writing">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="rating"
+                                            value="<%= row.rating %>" placeholder="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="remark" class="col-md-3 control-label">remark </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

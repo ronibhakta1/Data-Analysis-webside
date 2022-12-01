@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.21/" id="EmployeeForm" class="form-horizontal" method="post" role="form">
+                               
+
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="strength_of_materials" class="col-md-3 control-label">strength of materials</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="strength_of_materials"
+                                            value="<%= row.strength_of_materials %>" placeholder="strength of materials">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="basic_electrical_and_electronics_engineering" class="col-md-3 control-label">basic electrical and electronics engineering</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="basic_electrical_and_electronics_engineering"
+                                            value="<%= row.basic_electrical_and_electronics_engineering %>" placeholder="basic electrical and electronics engineering">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="thermal_engineering" class="col-md-3 control-label">thermal engineering</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="thermal_engineering"
+                                            value="<%= row.thermal_engineering %>" placeholder="thermal engineering">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mechanical_working_drawing" class="col-md-3 control-label">mechanical working drawing</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="mechanical_working_drawing"
+                                            value="<%= row.mechanical_working_drawing %>" placeholder="mechanical working drawing">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="engineering_metrology" class="col-md-3 control-label">engineering metrology</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="engineering_metrology"
+                                            value="<%= row.engineering_metrology %>" placeholder="engineering metrology">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mechanical_engineering_metarials" class="col-md-3 control-label">mechanical engineering metarials</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="mechanical_engineering_metarials"
+                                            value="<%= row.mechanical_engineering_metarials %>" placeholder="mechanical engineering metarials">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="rating"
+                                            value="<%= row.rating %>" placeholder="rating">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="remark" class="col-md-3 control-label">remark</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>

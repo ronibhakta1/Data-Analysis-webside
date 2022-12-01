@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <% computer.forEach(function(row){%>
+                <div id="signupbox" style="margin-top:50px"
+                    class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <%= title %>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form action="/update8.4/" id="EmployeeForm" class="form-horizontal" method="post"
+                                role="form">
+                                
+
+                                <div class="form-group">
+                                    <label for="student_er_no" class="col-md-3 control-label">ER NO</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="student_er_no"
+                                            value="<%= row.student_er_no %>" placeholder="Enter ER no">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="hydraulics" class="col-md-3 control-label">hydraulics</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="hydraulics"
+                                            value="<%= row.hydraulics %>" placeholder="hydraulics">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="theory_of_structures" class="col-md-3 control-label">theory of structures</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="theory_of_structures"
+                                            value="<%= row.theory_of_structures %>" placeholder="theory of structures">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="railway_and_bridge_engineering" class="col-md-3 control-label">railway and bridge engineering</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="railway_and_bridge_engineering"
+                                            value="<%= row.railway_and_bridge_engineering %>"
+                                            placeholder="railway and bridge engineering">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="geo_technical_engineering" class="col-md-3 control-label">geo technical engineering</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="geo_technical_engineering"
+                                            value="<%= row.geo_technical_engineering %>"
+                                            placeholder="geo technical engineering">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="building_planning_and_drawing" class="col-md-3 control-label">building planning and drawing</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="building_planning_and_drawing"
+                                            value="<%= row.building_planning_and_drawing %>"
+                                            placeholder="building planning and drawing">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="environmental_studies" class="col-md-3 control-label">environmental studies</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="environmental_studies"
+                                            value="<%= row.environmental_studies %>"
+                                            placeholder="environmental studies">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="percentage" class="col-md-3 control-label">percentage</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="percentage"
+                                            value="<%= row.percentage %>" placeholder="percentage">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="col-md-3 control-label">rating</label>
+                                    <div class="col-md-9">
+                                       <input type="text" class="form-control" name="rating"
+                                           value="<%= row.rating %>" placeholder="rating">
+                                   </div>
+                                <div class="form-group">
+                                    <label for="remark" class="col-md-3 control-label">remark </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="remark" value="<%= row.remark %>"
+                                            placeholder="remark">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <!-- Button -->
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>
